@@ -14,6 +14,8 @@ app.use(express.json());
 if (process.env.NODE_ENV === "production") {
     app.use(express.static("client/build"));
 }
+
+require('./controllers/controller.js')(app)
 // app.use(routes);
 
 // mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/employeelist");
