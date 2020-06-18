@@ -5,6 +5,7 @@ import Title from "./components/Title";
 import employees from './employees.json'
 import FilterBar from "./components/FilterBar";
 import SortBar from "./components/SortBar";
+import Navbar from "./components/Navbar";
 
 
 
@@ -84,6 +85,7 @@ class App extends Component {
   render() {
     return (
       <Wrapper>
+
         <Title>Employee Directory</Title>
         <FilterBar
           handleFormSubmit={this.handleFilterSubmit}
