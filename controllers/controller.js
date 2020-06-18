@@ -25,6 +25,17 @@ module.exports = function (app) {
             res.json(dbEmployee)
         })
     })
+    app.put('/api/employee', function (req, res) {
+        db.employee.update(req.body,
+            {
+                where: {
+                    id: req.body.id
+                }
+            })
+            .then(function (dbEmployee) {
+                res.json(dbEmployee)
+            })
+    })
     app.get('/api/employee/:id', function (req, res) {
         db.employee.findOne({
             where: {
