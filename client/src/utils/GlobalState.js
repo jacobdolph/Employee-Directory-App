@@ -17,7 +17,7 @@ const reducer = (state, action) => {
         case SET_CURRENT_EMPLOYEE:
             return {
                 ...state,
-                currentEmployee: action.empoyee,
+                currentEmployee: action.employee,
                 loading: false
             };
         case UPDATE_EMPLOYEES:
@@ -29,7 +29,7 @@ const reducer = (state, action) => {
         case ADD_EMPLOYEE:
             return {
                 ...state,
-                employees: [action.empoyee, ...action.employees],
+                employees: [action.employee, ...action.employees],
                 loading: false
             };
         case REMOVE_EMPLOYEE:
