@@ -36,19 +36,47 @@ function EmployeeList() {
     }, []);
 
     return (
-        <div>
+        <div >
+
+
             <h1>Employee Directory</h1>
             <h3 className='mb-5 mt-5'>Click on an employee to view</h3>
-            {state.employees.length ? (
-                <List>
-                    {state.employees[0].map(employee => {
-                        console.log(employee.id)
-                    })}
-                </List>
-            ) : (
-                    <h3>There are no Employees</h3>
-                )}
+            <table className="table table-bordered table-striped table-hover">
+
+                <thead className='thead-dark'>
+                    <tr>
+                        <th scope='col'>First</th>
+                        <th scope='col'>Last</th>
+                        <th scope='col'>Role</th>
+                        <th scope='col'>Department</th>
+                    </tr>
+                </thead>
+                {state.employees.length ? (
+                    <tbody>
+
+                        {state.employees[0].map(employee => (
+
+                            <ListItem
+                                key={employee.id}
+                                employee={employee}
+                            >
+                                {console.log(employee)}
+                            </ListItem>
+
+                        ))}
+                    </tbody>
+
+                ) : (
+                        <tbody>
+                            <tr>
+                                <td>There are no Employees</td>
+                            </tr>
+                        </tbody>
+                    )}
+
+            </table>
         </div>
+
     )
 };
 

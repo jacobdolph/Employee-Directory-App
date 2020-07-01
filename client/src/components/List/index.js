@@ -5,12 +5,19 @@ import "./style.css";
 
 export function List({ children }) {
     return (
-        <div className="list-overflow-container">
-            <ul className="list-group">{children}</ul>
-        </div>
+
+        <tbody className="list-overflow-container">{children}</tbody>
+
     );
 }
 
-export function ListItem({ children }) {
-    return <li className="list-group-item">{children}</li>;
+export function ListItem({ employee }) {
+    return (
+        <tr scope='row' key={employee.id}>
+            <td >{employee.first_name}</td>
+            <td >{employee.last_name}</td>
+            <td >{employee.employee_role.role_name}</td>
+            <td >{employee.employee_role.department.department_name}</td>
+        </tr>
+    );
 }
