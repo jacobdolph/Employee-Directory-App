@@ -13,7 +13,7 @@ export function List({ children }) {
 
 export function ListItem({ employee }) {
     return (
-        <tr scope='row' key={employee.id}>
+        <tr itemScope='row' key={employee.id}>
             <td >{employee.first_name}</td>
             <td >{employee.last_name}</td>
             <td >{employee.employee_role.role_name}</td>
