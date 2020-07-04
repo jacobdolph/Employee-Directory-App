@@ -40,7 +40,6 @@ function EmployeeList() {
 
 
             <h1>Employee Directory</h1>
-            <h3 className='mb-5 mt-5'>Click on an employee to view</h3>
             <table className="table table-bordered table-striped table-hover">
 
                 <thead className='thead-dark'>

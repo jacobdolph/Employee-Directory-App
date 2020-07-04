@@ -3,9 +3,9 @@ import { Col, Row, Container } from '../components/Grid';
 import EmployeeList from '../components/EmployeeList';
 import SideNav from '../components/SideNav';
 
-function Home() {
+function Directory() {
     return (
-        <Container fluid>
+        <Container fluid >
             <Row>
                 <Col size='md-2'>
                     <SideNav></SideNav>
@@ -17,4 +17,4 @@ function Home() {
         </Container>
     )
 }
-export default Home;
+export default Directory;

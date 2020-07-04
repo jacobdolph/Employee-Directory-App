@@ -4,6 +4,7 @@ import { StoreProvider } from "./utils/GlobalState";
 import Home from './pages/Home';
 import Directory from './pages/Directory';
 import Navbar from "./components/Navbar";
+import SideNav from "./components/SideNav";
 
 
 
@@ -11,7 +12,7 @@ import Navbar from "./components/Navbar";
 function App() {
   return (
     <Router>
-      <div>
+      <div style={{ height: '100%' }}>
         <StoreProvider>
           <Switch>
             <Route exact path='/' component={Home} />
