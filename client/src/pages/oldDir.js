@@ -1,9 +1,4 @@
 import React, { Component } from 'react';
-import { Col, Row, Container } from '../components/Grid';
-import Jumbotron from '../components/Jumbotron';
-import API from '../utils/API';
-import { useStoreContext } from '../utils/GlobalState';
-import { SET_CURRENT_EMPLOYEE, ADD_EMPLOYEE, REMOVE_EMPLOYEE } from '../utils/actions';
 import EmployeeCard from "../components/EmployeeCard";
 import Wrapper from "../components/Wrapper";
 import Title from "../components/Title";
